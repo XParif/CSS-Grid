@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Auto Flows</title>
+    <style>
+        .grid {
+            height: 200px;
+            width: 200px;
+            display: grid;
+            gap: 10px;
+            grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+            grid-auto-flow: column; /* or 'row', 'row dense', 'column dense' */
+        }
+
+        .item1 {
+            background-color: lime;
+            grid-row-start: 3;
+        }
+
+        .item2 {
+            background-color: yellow;
+        }
+
+        .item3 {
+            background-color: blue;
+            grid-row-start: 2;
+        }
+
+        .item4 {
+            background-color: red;
+        }
+
+        .item5 {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item4"></div>
+        <div class="item5"></div>
+    </div>
+
+    <select name="" id="direction">
+        <option value="column">Column</option>
+        <option value="row">Row</option>
+    </select>
+
+    <input type="checkbox" name="" id="dense">
+    <label for="dense">Dense</label>
+</body>
+</html>
