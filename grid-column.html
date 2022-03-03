@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Column</title>
+    <style>
+        .grid {
+            display: grid;
+            height: 100px;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: 100px;
+        }
+
+        .item1 {
+            background-color: lime;
+        }
+
+        .item2 {
+            background-color: yellow;
+            grid-column: 2 / 4;
+        }
+
+        .item3 {
+            background-color: blue;
+            grid-column: span 2 / 7;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+    </div>
+</body>
+</html>
